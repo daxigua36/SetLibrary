@@ -1,19 +1,18 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ObjProg
 {
 	public class LinkedSet<T> : ISet<T>
 	{
-		protected class Node<T>
+		protected class Node<K>
 		{
-			public T Value { get; set; }
-			public Node<T> Next { get; set; }
+			public K Value { get; set; }
+			public Node<K> Next { get; set; }
 
-			public Node(T value, Node<T> next)
+			public Node(K value, Node<K> next)
 			{
 				Value=value;
 				Next=next;
@@ -98,7 +97,7 @@ namespace ObjProg
 			throw new NotImplementedException ();
 		}
 
-		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator ()
+		IEnumerator IEnumerable.GetEnumerator ()
 		{
 			return GetEnumerator ();
 		}

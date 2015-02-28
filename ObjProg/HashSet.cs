@@ -1,29 +1,19 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ObjProg
 {
 	public class HashSet<T> : ISet<T>
 	{
+		int count;
+
 		public HashSet ()
 		{
+			count = 0;
 		}
-
-		public IEnumerator<T> GetEnumerator ()
-		{
-			throw new NotImplementedException ();
-		}
-
-
-		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator ()
-		{
-			return GetEnumerator ();
-		}
-
-		int count;
+			
 		public int Count {
 			get {
 				return count;
@@ -54,6 +44,15 @@ namespace ObjProg
 
 		}
 
+		public IEnumerator<T> GetEnumerator ()
+		{
+			throw new NotImplementedException ();
+		}
+			
+		IEnumerator IEnumerable.GetEnumerator ()
+		{
+			return GetEnumerator ();
+		}
 	}
 }
 

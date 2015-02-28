@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections;
 
 namespace ObjProg
 {
@@ -11,25 +9,9 @@ namespace ObjProg
 		public UnmutableSet ()
 		{
 		}
-		public IEnumerator<T> GetEnumerator ()
-		{
-			throw new NotImplementedException ();
-		}
-
-
-		System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator ()
-		{
-			return GetEnumerator ();
-		}
-
-		int count;
-		public int Count {
-			get {
-				return count;
-			}
-		}
-
-
+			
+		public int Count{ get; set;}
+			
 		public bool isEmpty {
 			get {
 				throw new NotImplementedException ();
@@ -51,6 +33,16 @@ namespace ObjProg
 		public void Remove(T value)
 		{
 
+		}
+
+		public IEnumerator<T> GetEnumerator ()
+		{
+			throw new NotImplementedException ();
+		}
+
+		IEnumerator IEnumerable.GetEnumerator ()
+		{
+			return GetEnumerator ();
 		}
 	}
 }
