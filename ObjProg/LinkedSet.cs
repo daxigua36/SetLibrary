@@ -65,18 +65,23 @@ namespace ObjProg
 		}
 		public bool Contains(T value)
 		{
-			bool contains = false;
+			if (isEmpty)
+				return false;
 			Node<T> curr = head;
 			while (curr.Next != null)
 			{
 				if (curr.Value.Equals(value))
-					contains = true;
-				curr = curr.Next;
+					return true;
+					
+				else 
+					curr = curr.Next;
 			}
-			return contains;
+			return false;
 		}
 		public void Remove(T value)
 		{
+			if (!Contains(value))
+				return;
 			Node<T> curr = head;
 			if (head.Value.Equals(value))
 				head = head.Next;

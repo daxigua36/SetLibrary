@@ -11,7 +11,6 @@ namespace ObjProg
 		bool Contains(T value);
 		void Remove(T value);
 
-		//properties
 		int Count{ get; }
 		bool isEmpty{ get; }
 	}

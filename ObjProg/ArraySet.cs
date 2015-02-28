@@ -10,16 +10,6 @@ namespace ObjProg
 		T[] array; 
 		T[] temparray;
 
-		bool arrayContains(T[] a, T val)
-		{
-			bool contains = false;
-			foreach (T elem in a)
-			{
-				if (elem.Equals(val))
-					contains = true;
-			}
-			return contains;
-		}
 		public ArraySet ()
 		{
 			count = 0;
@@ -64,6 +54,8 @@ namespace ObjProg
 		}
 		public bool Contains(T value)
 		{
+			if (isEmpty)
+				return false;
 			bool contains = false;
 			foreach (T elem in array)
 			{
@@ -74,7 +66,7 @@ namespace ObjProg
 		}
 		public void Remove(T value)
 		{
-			if (!Contains (value) || isEmpty)
+			if (!Contains (value))
 				return;
 			temparray = new T[array.Length - 1];
 			int j = 0;
