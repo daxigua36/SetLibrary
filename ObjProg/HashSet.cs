@@ -59,12 +59,12 @@ namespace ObjProg
 				{
 					if (curr.Hash.Equals(valuehash))
 					{
-						Node<T> curr1 = curr;
-						while (curr1.Neighbor != null)
+						Node<T> temp = curr;
+						while (temp.Neighbor != null)
 						{
-							curr1 = curr1.Neighbor;
+							temp = temp.Neighbor;
 						}
-						curr1.Neighbor = new Node<T> (value, null, null);
+						temp.Neighbor = new Node<T> (value, null, null);
 						count++;
 						return;
 					}
@@ -89,13 +89,15 @@ namespace ObjProg
 			{
 				if (curr.Hash.Equals (valuehash))
 				{
-					Node<T> curr1 = curr;
-					while (curr1.Neighbor != null)
+					Node<T> temp = curr;
+					if (temp.Value.Equals (value))
+						return true;
+					while (temp.Neighbor != null)
 					{
-						if (curr.Value.Equals(value))
+						if (temp.Value.Equals(value))
 							return true;
 						else 
-							curr1 = curr1.Neighbor;
+							temp = temp.Neighbor;
 					}
 				}
 				else 
@@ -103,26 +105,86 @@ namespace ObjProg
 			}
 			return false;
 		}
-		//unfinished
 		public void Remove(T value)
 		{
-			if (!Contains(value))
+			if (!Contains (value))
 				return;
 			int valuehash = value.GetHashCode ();
 			Node<T> curr = head;
-			if (head.Value.Equals(value))
-				head = head.Next;
+			if (head.Hash.Equals (valuehash))
+			{
+				if (head.Value.Equals (value))
+				{
+					if (head.Neighbor != null)
+					{
+						head.Neighbor.Next = head.Next;
+						head = head.Neighbor;
+						count--;
+						return;
+					}
+					else
+					{
+						head = head.Next;
+						count--;
+						return;
+					}
+				}
+				else
+				{
+					Node<T> temp = head;
+					while (temp.Neighbor != null)
+						if (temp.Neighbor.Value.Equals (value))
+						{
+							temp.Neighbor = temp.Neighbor.Neighbor;
+							count--;
+							return;
+						}
+						else
+							temp = temp.Neighbor;
+				}
+			} 
 			else
 			{
 				while (curr.Next != null)
-					if (curr.Next.Value.Equals(value))
+				{
+					if (curr.Next.Hash.Equals (valuehash))
 					{
-						curr.Next = curr.Next.Next;
-						return;
+						if (curr.Next.Value.Equals (value))
+						{
+							if (curr.Next.Neighbor != null)
+							{
+								curr.Next.Neighbor.Next = curr.Next.Next;
+								curr.Next = curr.Next.Neighbor;
+								count--;
+								return;
+							}
+							else
+							{
+								curr.Next = curr.Next.Next;
+								count--;
+								return;
+							}
+						}
+						else
+						{
+							Node<T> temp = curr.Next;
+							while (temp.Neighbor != null)
+								if (temp.Neighbor.Value.Equals (value))
+								{
+									temp.Neighbor = temp.Neighbor.Neighbor;
+									count--;
+									return;
+								}
+								else
+									temp = temp.Neighbor;
+						}
 					}
-					else curr = curr.Next;
+					else
+					{
+						curr = curr.Next;
+					}
+				}
 			}
-			count--;
 		}
 
 		public IEnumerator<T> GetEnumerator ()

@@ -6,33 +6,38 @@ namespace ObjProg
 {
 	public class UnmutableSet<T> : ISet<T>
 	{
-		public UnmutableSet ()
+		ISet<T> BaseSet;
+
+		public UnmutableSet (ISet<T> baseSet)
 		{
+			if (baseSet is UnmutableSet<T>)
+				throw new SetException("UnmutableList can not be base for UnmutableList");
+			this.BaseSet = baseSet;
 		}
 			
-		public int Count{ get; set;}
+		public int Count{ get{ return BaseSet.Count; }}
 			
 		public bool isEmpty {
 			get {
-				throw new NotImplementedException ();
+				return Count == 0;
 			}
 		}
 
 		public void Add(T value)
 		{
-
+			throw new SetException("New elements can not be added to UnmutableSet");
 		}
 		public void Clear()
 		{
-
+			throw new SetException("UnmutableSet can not be cleared");
 		}
 		public bool Contains(T value)
 		{
-			return false;
+			return BaseSet.Contains (value);
 		}
 		public void Remove(T value)
 		{
-
+			throw new SetException("Elements can not be removed from UnmutableSet");
 		}
 
 		public IEnumerator<T> GetEnumerator ()

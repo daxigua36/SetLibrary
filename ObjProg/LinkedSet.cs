@@ -83,19 +83,23 @@ namespace ObjProg
 			if (!Contains(value))
 				return;
 			Node<T> curr = head;
-			if (head.Value.Equals(value))
+			if (head.Value.Equals (value))
+			{
 				head = head.Next;
+				count--;
+				return;
+			}
 			else
 			{
 				while (curr.Next != null)
 					if (curr.Next.Value.Equals(value))
 					{
 						curr.Next = curr.Next.Next;
+						count--;
 						return;
 					}
 					else curr = curr.Next;
 			}
-			count--;
 		}
 		public IEnumerator<T> GetEnumerator ()
 		{
