@@ -1,0 +1,5 @@
+/home/vlad/projects/ObjProg/ObjProg/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/vlad/projects/ObjProg/ObjProg/bin/Debug/ObjProg.exe.mdb
+/home/vlad/projects/ObjProg/ObjProg/bin/Debug/ObjProg.exe
+/home/vlad/projects/ObjProg/ObjProg/obj/x86/Debug/ObjProg.exe
+/home/vlad/projects/ObjProg/ObjProg/obj/x86/Debug/ObjProg.exe.mdb

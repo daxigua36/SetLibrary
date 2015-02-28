@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetLibrary", "ObjProg\SetLibrary.csproj", "{476B7D44-E613-47BB-BE46-E6F004BA0FA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetApplication", "SetApplication\SetApplication.csproj", "{055F6723-DDDC-4E11-BB00-133FA5CE72D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{055F6723-DDDC-4E11-BB00-133FA5CE72D9}.Debug|x86.ActiveCfg = Debug|x86
+		{055F6723-DDDC-4E11-BB00-133FA5CE72D9}.Debug|x86.Build.0 = Debug|x86
+		{055F6723-DDDC-4E11-BB00-133FA5CE72D9}.Release|x86.ActiveCfg = Release|x86
+		{055F6723-DDDC-4E11-BB00-133FA5CE72D9}.Release|x86.Build.0 = Release|x86
+		{476B7D44-E613-47BB-BE46-E6F004BA0FA2}.Debug|x86.ActiveCfg = Debug|x86
+		{476B7D44-E613-47BB-BE46-E6F004BA0FA2}.Debug|x86.Build.0 = Debug|x86
+		{476B7D44-E613-47BB-BE46-E6F004BA0FA2}.Release|x86.ActiveCfg = Release|x86
+		{476B7D44-E613-47BB-BE46-E6F004BA0FA2}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
