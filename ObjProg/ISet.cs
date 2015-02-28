@@ -18,9 +18,5 @@ namespace ObjProg
 		int Count{ get; }
 		bool isEmpty{ get; }
 	}
-	public class SetException : ApplicationException
-	{
-		public SetException(string message) : base(message) {}
-	}
 }
 

@@ -2,11 +2,9 @@
 
 namespace ObjProg
 {
-	public class SetException
-	{
-		public SetException ()
-		{
-		}
+	public class SetException : ApplicationException
+	{		
+		public SetException(string message) : base(message) {}
 	}
 }
 

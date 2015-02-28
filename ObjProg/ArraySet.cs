@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjProg
 {
@@ -46,7 +44,7 @@ namespace ObjProg
 				array [0] = value;
 				count++;
 			} 
-			else if (!arrayContains(array,value))
+			else if (!Contains(value))
 			{
 				temparray = new T [array.Length+1];
 				for (int i = 0; i < array.Length; i++)
@@ -61,13 +59,22 @@ namespace ObjProg
 		public void Clear()
 		{
 			array = new T [1];
+			count = 0;
 		}
 		public bool Contains(T value)
 		{
-			return arrayContains (array, value);
+			bool contains = false;
+			foreach (T elem in array)
+			{
+				if (elem.Equals(value))
+					contains = true;
+			}
+			return contains;
 		}
 		public void Remove(T value)
 		{
+			if (!Contains (value) || isEmpty)
+				return;
 			temparray = new T[array.Length - 1];
 			int j = 0;
 			for (int i = 0; i < array.Length; i++)
@@ -79,6 +86,7 @@ namespace ObjProg
 				}
 			}
 			array = temparray;
+			count--;
 		}
 		public IEnumerator<T> GetEnumerator ()
 		{

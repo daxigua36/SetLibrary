@@ -1,0 +1,8 @@
+/home/vlad/projects/ObjProg/SetApplication/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/vlad/projects/ObjProg/SetApplication/bin/Debug/SetApplication.exe.mdb
+/home/vlad/projects/ObjProg/SetApplication/bin/Debug/SetApplication.exe
+/home/vlad/projects/ObjProg/SetApplication/obj/x86/Debug/SetApplication.exe
+/home/vlad/projects/ObjProg/SetApplication/obj/x86/Debug/SetApplication.exe.mdb
+/home/vlad/projects/ObjProg/SetApplication/bin/Debug/ObjProg.dll
+/home/vlad/projects/ObjProg/SetApplication/bin/Debug/ObjProg.exe.mdb
+/home/vlad/projects/ObjProg/SetApplication/bin/Debug/ObjProg.dll.mdb
