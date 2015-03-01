@@ -16,17 +16,9 @@ namespace ObjProg
 			array = new T [1];
 		}
 			
-		public int Count {
-			get {
-				return count;
-			}
-		}
-			
-		public bool isEmpty {
-			get {
-				return Count == 0;
-			}
-		}
+		public int Count { get{ return count; } }
+
+		public bool isEmpty { get{ return Count == 0;} }
 
 		public void Add(T value)
 		{

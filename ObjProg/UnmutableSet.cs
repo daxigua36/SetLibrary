@@ -12,16 +12,12 @@ namespace ObjProg
 		{
 			if (baseSet is UnmutableSet<T>)
 				throw new SetException("UnmutableList can not be base for UnmutableList");
-			this.BaseSet = baseSet;
+			BaseSet = baseSet;
 		}
 			
-		public int Count{ get{ return BaseSet.Count; }}
+		public int Count { get{ return BaseSet.Count; } }
 			
-		public bool isEmpty {
-			get {
-				return Count == 0;
-			}
-		}
+		public bool isEmpty { get{ return Count == 0;} }
 
 		public void Add(T value)
 		{

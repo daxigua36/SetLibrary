@@ -32,17 +32,9 @@ namespace ObjProg
 			count = 0;
 		}
 			
-		public int Count {
-			get {
-				return count;
-			}
-		}
+		public int Count { get{ return count; } }
 			
-		public bool isEmpty {
-			get {
-				return Count == 0;
-			}
-		}
+		public bool isEmpty { get{ return Count == 0;} }
 
 		public void Add(T value)
 		{

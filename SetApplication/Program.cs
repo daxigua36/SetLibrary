@@ -6,7 +6,7 @@ namespace SetApplication
 {
 	class MainClass
 	{
-		public static void Main (string[] args)
+		public static void Main ()
 		{
 			ArraySet<int> set1 = new ArraySet<int> ();
 			set1.Add (5);
