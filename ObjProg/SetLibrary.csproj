@@ -40,6 +40,7 @@
     <Compile Include="ArraySet.cs" />
     <Compile Include="HashSet.cs" />
     <Compile Include="SetException.cs" />
+    <Compile Include="SetUtils.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
