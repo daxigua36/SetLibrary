@@ -181,7 +181,18 @@ namespace ObjProg
 
 		public IEnumerator<T> GetEnumerator ()
 		{
-			throw new NotImplementedException ();
+			Node<T> curr = head;
+			while (curr != null)
+			{
+				yield return curr.Value;
+				Node<T> temp = curr;
+				while (temp.Neighbor != null)
+				{
+					yield return temp.Neighbor.Value;
+					temp = temp.Neighbor;
+				}
+				curr = curr.Next;
+			}
 		}
 			
 		IEnumerator IEnumerable.GetEnumerator ()

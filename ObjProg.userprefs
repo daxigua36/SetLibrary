@@ -1,15 +1,14 @@
 ﻿<Properties StartupItem="SetApplication/SetApplication.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ObjProg/SetUtils.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ObjProg/ArraySet.cs">
     <Files>
-      <File FileName="ObjProg/HashSet.cs" Line="1" Column="1" />
+      <File FileName="ObjProg/HashSet.cs" Line="30" Column="30" />
       <File FileName="ObjProg/LinkedSet.cs" Line="1" Column="1" />
       <File FileName="ObjProg/ArraySet.cs" Line="1" Column="1" />
-      <File FileName="SetApplication/Program.cs" Line="1" Column="1" />
-      <File FileName="ObjProg/UnmutableSet.cs" Line="1" Column="1" />
+      <File FileName="SetApplication/Program.cs" Line="17" Column="17" />
       <File FileName="ObjProg/ISet.cs" Line="1" Column="1" />
       <File FileName="ObjProg/SetException.cs" Line="1" Column="1" />
-      <File FileName="ObjProg/SetUtils.cs" Line="54" Column="54" />
+      <File FileName="ObjProg/SetUtils.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -73,9 +73,11 @@ namespace ObjProg
 			array = temparray;
 			count--;
 		}
+
 		public IEnumerator<T> GetEnumerator ()
 		{
-			throw new NotImplementedException ();
+			for (int i = 0; i < count; i++)
+				yield return array[i];
 		}
 
 		IEnumerator IEnumerable.GetEnumerator ()

@@ -96,7 +96,12 @@ namespace ObjProg
 		}
 		public IEnumerator<T> GetEnumerator ()
 		{
-			throw new NotImplementedException ();
+			Node<T> curr = head;
+			while (curr != null)
+			{
+				yield return curr.Value;
+				curr = curr.Next;
+			}
 		}
 
 		IEnumerator IEnumerable.GetEnumerator ()
