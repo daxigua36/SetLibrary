@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 
 namespace ObjProg
@@ -51,8 +50,7 @@ namespace ObjProg
 			bool contains = false;
 			foreach (T elem in array)
 			{
-				if (elem.Equals(value))
-					contains = true;
+				contains |= elem.Equals (value);
 			}
 			return contains;
 		}

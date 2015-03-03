@@ -40,7 +40,7 @@ namespace SetApplication
 			Console.WriteLine (set3.Contains (5)+" "+ set3.Count);
 			UnmutableSet<int> set4 = new UnmutableSet<int> (set2);
 			Console.WriteLine(set4.Contains (5)+" "+ set4.Count);
-			//throws an exception set4.Clear ();
+			set4.Clear ();
 		}
 	}
 }

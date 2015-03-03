@@ -38,7 +38,7 @@ namespace ObjProg
 
 		public IEnumerator<T> GetEnumerator ()
 		{
-			throw new NotImplementedException ();
+			return BaseSet.GetEnumerator ();
 		}
 
 		IEnumerator IEnumerable.GetEnumerator ()

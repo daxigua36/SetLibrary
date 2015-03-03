@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 
 
@@ -194,7 +193,7 @@ namespace ObjProg
 				curr = curr.Next;
 			}
 		}
-			
+
 		IEnumerator IEnumerable.GetEnumerator ()
 		{
 			return GetEnumerator ();
